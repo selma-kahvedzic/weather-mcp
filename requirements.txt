@@ -1,0 +1,5 @@
+fastapi
+fastmcp>=0.1.6
+httpx>=0.27
+uvicorn[standard]>=0.29
+anthropic>=0.17  # ← Samo ako koristiš Claude
