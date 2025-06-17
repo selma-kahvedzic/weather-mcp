@@ -4,6 +4,9 @@ from fastapi import FastAPI, Request
 from mcp.server.fastmcp import FastMCP
 import uvicorn
 
+app = FastAPI()
+mcp = FastMCP()
+
 # MCP HTTP endpoint
 @app.post("/mcp")
 async def handle_mcp(request: Request):
@@ -95,4 +98,4 @@ Forecast: {period['detailedForecast']}
     return "\n---\n".join(forecasts)
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=port)
+    uvicorn.run(app, host="0.0.0.0", port=8080)
